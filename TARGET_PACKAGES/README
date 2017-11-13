@@ -1,0 +1,7 @@
+12NOV 2017
+  - linux : git clone --depth 1 https://github.com/hardkernel/linux.git -b odroidxu4-4.9.y linux
+  - qtbase : https://github.com/qt/qtbase.git : v5.9.0-rc2
+  - xf86-video-armsoc
+    - compiling option
+      - ./configure --with-drmmode=exynos  CC=buildroot/output/host/usr/bin/arm-linux-gnueabihf-gcc CPP=buildroot/output/host/usr/bin/arm-linux-gnueabihf-cpp --prefix=buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/ --target=arm  --host=i386-linux PKG_CONFIG=buildroot/output/host/usr/bin/pkg-config
+    

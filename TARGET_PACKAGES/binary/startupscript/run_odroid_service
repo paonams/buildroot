@@ -1,0 +1,18 @@
+#!/bin/bash
+start() {
+      echo "setting odroid ip"
+      #/etc/setip.sh
+      ifconfig eth0 192.168.0.7
+      echo "mouting partition to /etc/mlabs"
+      #/etc/mount.sh
+      mount /dev/mmcblk0p4 /etc/mlabs/
+}
+
+stop() {
+      echo "unmounting /etc/mlabs"
+      umout -l /etc/mlabs
+}
+
+case $1 in
+  start|stop) "$1" ;;
+  esac

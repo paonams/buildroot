@@ -1,0 +1,20 @@
+How to :
+12 NOV 2017
+  - this buildroot is buildroot-2016.11.2
+  - To get started for the first time
+  - cp configs/odroid_xu4_config .config
+#compiling buildroot
+#To customize Linux kernel:
+make linux-menuconfig
+
+#To customize software packages, such as busybox:
+make busybox-menuconfig
+
+#To customize userspace software packages:
+make menuconfig
+
+#To customize uclic
+make uclibc-menuconfig
+
+#To compile
+make 

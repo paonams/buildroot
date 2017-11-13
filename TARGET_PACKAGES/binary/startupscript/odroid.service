@@ -1,0 +1,9 @@
+[Unit]
+Description=set ip and mount partition
+
+[Service]
+Type=oneshot
+ExecStart=/etc/run_odroid_service
+
+[Install]
+WantedBy=default.target
