@@ -1,0 +1,15 @@
+# tk pkg-config source file
+
+prefix=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
+exec_prefix=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
+libdir=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib
+includedir=${prefix}/include
+
+Name: The Tk Toolkit
+Description: Tk is a cross-platform graphical user interface toolkit, the standard GUI not only for Tcl, but for many other dynamic languages as well.
+URL: http://www.tcl.tk/
+Version: 8.6.5
+Requires: tcl >= 8.6
+Libs: -L${libdir} -ltk8.6 -ltkstub8.6
+Libs.private: -lXft  -lfontconfig -lX11
+Cflags: -I${includedir}
