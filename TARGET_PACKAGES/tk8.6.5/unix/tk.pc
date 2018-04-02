@@ -1,8 +1,8 @@
 # tk pkg-config source file
 
-prefix=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
-exec_prefix=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
-libdir=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib
+prefix=/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
+exec_prefix=/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
+libdir=/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib
 includedir=${prefix}/include
 
 Name: The Tk Toolkit

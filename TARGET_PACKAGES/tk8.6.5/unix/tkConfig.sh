@@ -36,11 +36,11 @@ TK_LIBS='-lX11 -lXft  -lfontconfig  -lpthread -ldl -lz  -lpthread -lieee -lm'
 
 # Top-level directory in which Tk's platform-independent files are
 # installed.
-TK_PREFIX='/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib'
+TK_PREFIX='/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib'
 
 # Top-level directory in which Tk's platform-specific files (e.g.
 # executables) are installed.
-TK_EXEC_PREFIX='/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib'
+TK_EXEC_PREFIX='/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib'
 
 # -I switch(es) to use to make all of the X11 include files accessible:
 TK_XINCLUDES=''
@@ -53,15 +53,15 @@ TK_LIB_FLAG='-ltk8.6'
 
 # String to pass to linker to pick up the Tk library from its
 # build directory.
-TK_BUILD_LIB_SPEC='-L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/unix -ltk8.6'
+TK_BUILD_LIB_SPEC='-L/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/unix -ltk8.6'
 
 # String to pass to linker to pick up the Tk library from its
 # installed directory.
-TK_LIB_SPEC='-L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib -ltk8.6'
+TK_LIB_SPEC='-L/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib -ltk8.6'
 
 # String to pass to the compiler so that an extension can
 # find installed Tk headers.
-TK_INCLUDE_SPEC='-I/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/include'
+TK_INCLUDE_SPEC='-I/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/include'
 
 # Location of the top-level source directory from which Tk was built.
 # This is the directory that contains a README file as well as
@@ -69,7 +69,7 @@ TK_INCLUDE_SPEC='-I/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firm
 # different place than the directory containing the source files, this
 # points to the location of the sources, not the location where Tk was
 # compiled.
-TK_SRC_DIR='/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5'
+TK_SRC_DIR='/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5'
 
 # Needed if you want to make a 'fat' shared library library
 # containing tk objects or link a different wish.
@@ -84,14 +84,14 @@ TK_STUB_LIB_FLAG='-ltkstub8.6'
 
 # String to pass to linker to pick up the Tk stub library from its
 # build directory.
-TK_BUILD_STUB_LIB_SPEC='-L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/unix -ltkstub8.6'
+TK_BUILD_STUB_LIB_SPEC='-L/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/unix -ltkstub8.6'
 
 # String to pass to linker to pick up the Tk stub library from its
 # installed directory.
-TK_STUB_LIB_SPEC='-L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib -ltkstub8.6'
+TK_STUB_LIB_SPEC='-L/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib -ltkstub8.6'
 
 # Path to the Tk stub library in the build directory.
-TK_BUILD_STUB_LIB_PATH='/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/unix/libtkstub8.6.a'
+TK_BUILD_STUB_LIB_PATH='/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/unix/libtkstub8.6.a'
 
 # Path to the Tk stub library in the install directory.
-TK_STUB_LIB_PATH='/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib/libtkstub8.6.a'
+TK_STUB_LIB_PATH='/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib/libtkstub8.6.a'

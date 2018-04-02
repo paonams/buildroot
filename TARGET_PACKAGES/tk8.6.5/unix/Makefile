@@ -29,10 +29,10 @@ LOCALES			= cs da de el en en_gb eo es fr hu it nl pl pt ru sv
 # to the "configure" script.  The *dir vars are standard configure
 # substitutions that are based off prefix and exec_prefix.
 
-prefix			= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
-exec_prefix		= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
+prefix			= /opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
+exec_prefix		= /opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib
 bindir			= ${exec_prefix}/bin
-libdir			= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib
+libdir			= /opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/lib
 includedir		= ${prefix}/include
 datarootdir		= @datarootdir@
 mandir			= ${prefix}/man
@@ -100,15 +100,15 @@ DEMO_INSTALL_DIR	= $(INSTALL_ROOT)$(TK_LIBRARY)/demos
 # The directory containing the Tcl sources and headers appropriate
 # for this version of Tk ("srcdir" will be replaced or has already
 # been replaced by the configure script):
-TCL_GENERIC_DIR		= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/generic
+TCL_GENERIC_DIR		= /opt/ARM/buildroot/output/build/tcl-8.6.6/generic
 
 # The directory containing the platform specific Tcl sources and headers
 # appropriate for this version of Tk:
-TCL_PLATFORM_DIR	= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/unix
+TCL_PLATFORM_DIR	= /opt/ARM/buildroot/output/build/tcl-8.6.6/unix
 
 # The directory containing the Tcl library archive file appropriate
 # for this version of Tk:
-TCL_BIN_DIR		= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/unix
+TCL_BIN_DIR		= /opt/ARM/buildroot/output/build/tcl-8.6.6/unix
 
 # The linker flags needed to link in the Tcl library (ex: -ltcl8.2)
 TCL_LIB_FLAG		= -ltcl8.6
@@ -200,7 +200,7 @@ SHELL			= /bin/bash
 # path. Targets that need an installed tclsh should not depend
 # on this variable.
 
-BUILD_TCLSH		= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/unix/tclsh
+BUILD_TCLSH		= /opt/ARM/buildroot/output/build/tcl-8.6.6/unix/tclsh
 
 # TCL_EXE is the name of a tclsh executable that is available *BEFORE*
 # running make for the first time. Certain build targets (make genstubs)
@@ -253,8 +253,8 @@ LIB_FILE		= ${TK_LIB_FILE}
 TK_LIB_FLAG		= -ltk8.6
 #TK_LIB_FLAG		= -ltk
 
-TCL_LIB_SPEC		= -L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/unix -ltcl8.6
-TCL_STUB_LIB_SPEC	= -L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/unix -ltclstub8.6
+TCL_LIB_SPEC		= -L/opt/ARM/buildroot/output/build/tcl-8.6.6/unix -ltcl8.6
+TCL_STUB_LIB_SPEC	= -L/opt/ARM/buildroot/output/build/tcl-8.6.6/unix -ltclstub8.6
 TCL_STUB_LIB_FLAG	= -ltclstub8.6
 TCL_STUB_LIB_FILE	= libtclstub8.6.a
 
@@ -304,13 +304,13 @@ XFT_LIBS		= -lXft  -lfontconfig
 AC_FLAGS		= -DPACKAGE_NAME=\"tk\" -DPACKAGE_TARNAME=\"tk\" -DPACKAGE_VERSION=\"8.6\" -DPACKAGE_STRING=\"tk\ 8.6\" -DPACKAGE_BUGREPORT=\"\" -DSTDC_HEADERS=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_MEMORY_H=1 -DHAVE_STRINGS_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_UNISTD_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DHAVE_PTHREAD_ATTR_SETSTACKSIZE=1 -DHAVE_PTHREAD_ATFORK=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -DHAVE_HIDDEN=1 -DHAVE_CAST_TO_UNION=1 -DTCL_SHLIB_EXT=\".so\" -DNDEBUG=1 -DTCL_CFG_OPTIMIZED=1 -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_TYPE=long\ long -DHAVE_STRUCT_DIRENT64=1 -DHAVE_STRUCT_STAT64=1 -DHAVE_OPEN64=1 -DHAVE_LSEEK64=1 -DHAVE_TYPE_OFF64_T=1 -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -Dstrtod=fixstrtod -DHAVE_INTPTR_T=1 -DHAVE_UINTPTR_T=1 -DHAVE_PW_GECOS=1 -DHAVE_LIBXFT=1 -DHAVE_XFT=1 -DHAVE_XKBKEYCODETOKEYSYM=1 -DXKEYCODETOKEYSYM_IS_DEPRECATED=1 
 AR			= ar
 RANLIB			= ranlib
-SRC_DIR			= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/unix
+SRC_DIR			= /opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/unix
 TOP_DIR			= $(SRC_DIR)/..
 GENERIC_DIR		= $(TOP_DIR)/generic
 TTK_DIR			= $(GENERIC_DIR)/ttk
 UNIX_DIR		= $(TOP_DIR)/unix
 BMAP_DIR		= $(TOP_DIR)/bitmaps
-TOOL_DIR		= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/tools
+TOOL_DIR		= /opt/ARM/buildroot/output/build/tcl-8.6.6/tools
 TEST_DIR		= $(TOP_DIR)/tests
 MAC_OSX_DIR		= $(TOP_DIR)/macosx
 XLIB_DIR		= $(TOP_DIR)/xlib
@@ -325,7 +325,7 @@ XLIB_DIR		= $(TOP_DIR)/xlib
 # should be installed (symlinks, compression, package name suffix).
 MAN_FLAGS               = 
 
-CC			= /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/bin/arm-linux-gnueabihf-gcc
+CC			= /opt/ARM/buildroot/output/host/usr/bin/arm-linux-gnueabihf-gcc
 
 CC_SWITCHES_NO_STUBS = ${CFLAGS} ${CFLAGS_WARNING} ${SHLIB_CFLAGS} \
 -I${UNIX_DIR} -I${GENERIC_DIR} -I${BMAP_DIR} -I${TCL_GENERIC_DIR} \
@@ -565,8 +565,8 @@ DEMOPROGS = browse hello ixset rmt rolodex square tcolor timer widget
 SHELL_ENV = \
 	LD_LIBRARY_PATH="`pwd`:${TCL_BIN_DIR}:$${LD_LIBRARY_PATH}"; \
 	export LD_LIBRARY_PATH; \
-	TCL_LIBRARY=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/library; export TCL_LIBRARY; \
-	TK_LIBRARY=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/library; export TK_LIBRARY;
+	TCL_LIBRARY=/opt/ARM/buildroot/output/build/tcl-8.6.6/library; export TCL_LIBRARY; \
+	TK_LIBRARY=/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/library; export TK_LIBRARY;
 
 all: binaries libraries doc
 
@@ -575,7 +575,7 @@ binaries: ${LIB_FILE} ${WISH_EXE}
 libraries:
 
 $(TOP_DIR)/doc/man.macros:
-	$(INSTALL_DATA) /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/doc/man.macros $(TOP_DIR)/doc/man.macros
+	$(INSTALL_DATA) /opt/ARM/buildroot/output/build/tcl-8.6.6/doc/man.macros $(TOP_DIR)/doc/man.macros
 
 doc: $(TOP_DIR)/doc/man.macros
 
@@ -615,7 +615,7 @@ objs: ${OBJS}
 
 
 ${WISH_EXE}: $(TK_STUB_LIB_FILE) $(WISH_OBJS) $(TK_LIB_FILE) 
-	${CC} ${CFLAGS} ${LDFLAGS} $(WISH_OBJS) -L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/unix -ltk8.6 \
+	${CC} ${CFLAGS} ${LDFLAGS} $(WISH_OBJS) -L/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/unix -ltk8.6 \
 		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o ${WISH_EXE}
 
 # Resetting the LIB_RUNTIME_DIR below is required so that
@@ -628,7 +628,7 @@ $(TKTEST_EXE): $(TKTEST_OBJS) $(TK_LIB_FILE)
 	$(MAKE) tktest-real LIB_RUNTIME_DIR="`pwd`:$(TCL_BIN_DIR)"
 
 tktest-real: ${TK_STUB_LIB_FILE}
-	${CC} ${CFLAGS} ${LDFLAGS} $(TKTEST_OBJS) ${TK_STUB_LIB_FILE} ${TCL_STUB_LIB_SPEC} -L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/unix -ltk8.6 \
+	${CC} ${CFLAGS} ${LDFLAGS} $(TKTEST_OBJS) ${TK_STUB_LIB_FILE} ${TCL_STUB_LIB_SPEC} -L/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/unix -ltk8.6 \
 		$(WISH_LIBS) $(CC_SEARCH_FLAGS) -o $(TKTEST_EXE)
 
 # # FIXME: This xttest rule seems to be broken in a number of ways.  It should
@@ -637,7 +637,7 @@ tktest-real: ${TK_STUB_LIB_FILE}
 #
 # xttest: test.o tkTest.o tkSquare.o $(TK_LIB_FILE) ${TK_STUB_LIB_FILE}
 # 	${CC} ${CFLAGS} ${LDFLAGS} test.o tkTest.o tkSquare.o \
-# 		-L/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/unix -ltk8.6 ${TK_STUB_LIB_FILE}  ${TCL_STUB_LIB_SPEC} \
+# 		-L/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/unix -ltk8.6 ${TK_STUB_LIB_FILE}  ${TCL_STUB_LIB_SPEC} \
 # 		$(WISH_LIBS) $(LD_SEARCH_FLAGS) -lXt -o xttest
 
 # Note, in the target below TCL_LIBRARY needs to be set or else
@@ -681,8 +681,8 @@ demo:
 # This target can be used to run wish inside either gdb or insight
 gdb: ${WISH_EXE}
 	@echo "set env LD_LIBRARY_PATH=\"`pwd`:${TCL_BIN_DIR}:$${LD_LIBRARY_PATH}\"" > gdb.run
-	@echo "set env TCL_LIBRARY=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6/library" >> gdb.run
-	@echo "set env TK_LIBRARY=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/tk8.6.5/library" >> gdb.run
+	@echo "set env TCL_LIBRARY=/opt/ARM/buildroot/output/build/tcl-8.6.6/library" >> gdb.run
+	@echo "set env TK_LIBRARY=/opt/ARM/buildroot/TARGET_PACKAGES/tk8.6.5/library" >> gdb.run
 	gdb ./${WISH_EXE} --command=gdb.run
 	rm gdb.run
 
@@ -1527,7 +1527,7 @@ DISTROOT = /tmp/dist
 DISTNAME = tk${VERSION}${PATCH_LEVEL}
 ZIPNAME	 = tk${MAJOR_VERSION}${MINOR_VERSION}${PATCH_LEVEL}-src.zip
 DISTDIR	 = $(DISTROOT)/$(DISTNAME)
-TCLDIR   = /home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/build/tcl-8.6.6
+TCLDIR   = /opt/ARM/buildroot/output/build/tcl-8.6.6
 $(UNIX_DIR)/configure: $(UNIX_DIR)/configure.in $(UNIX_DIR)/tcl.m4 \
 		$(UNIX_DIR)/aclocal.m4
 	cd $(UNIX_DIR); autoconf

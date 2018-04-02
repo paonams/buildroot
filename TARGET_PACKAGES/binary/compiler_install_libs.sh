@@ -1,4 +1,4 @@
-TARGET=/home/sanjit/Documents/workArea/LINUXCNC/compiler/odroid/firmware/buildroot-2016.11.2/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot
+TARGET=/opt/ARM/buildroot/output/host/usr/arm-buildroot-linux-gnueabihf/sysroot
 
 cd $TARGET/usr/lib
 rm libEGL* libGLE* libOpenC* libmali.so

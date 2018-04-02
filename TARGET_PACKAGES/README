@@ -7,7 +7,7 @@
 
 On the freshly checkout code below needs to be done one time:
 1. compiling fixstrtod and make
-cd /opt/ARM/buildroot/output/build/tcl-8.6.3/unix
+cd /opt/ARM/buildroot/output/build/tcl-8.6.6/unix
 make fixstrtod.o
 change below in Makefile
 TCL_OBJS = ${GENERIC_OBJS} ${UNIX_OBJS} ${NOTIFY_OBJS} ${COMPAT_OBJS} \
