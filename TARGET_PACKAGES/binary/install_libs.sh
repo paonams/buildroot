@@ -28,3 +28,6 @@ cp -r xserver/* $TARGET/usr/lib/xorg/modules
 cp bin_xserver/* $TARGET/bin/
 cp bin_xserver/* $TARGET/usr/bin/
 
+cp sshd_config $TARGET/etc/ssh
+
+
